@@ -66,13 +66,13 @@ Press q to quit.
 
 Step 1: Training the Model
 To train the model from scratch using the provided dataset:
+- What happens: The script loads images, applies geometric augmentations (Zoom, Perspective), and trains for 20 epochs.
+- Output: Saves the trained weights to robocon_model.pth.
 
 ```
 python train.py
 ```
 
-What happens: The script loads images, applies geometric augmentations (Zoom, Perspective), and trains for 20 epochs.
-Output: Saves the trained weights to robocon_model.pth.
 --- 
 
 Step 2: Export to ONNX
@@ -88,20 +88,21 @@ Output: Generates robocon_vision.onnx.
 Step 3: Run Inference (Live Demo)
 Connect a webcam and run the real-time detection system:
 
+Inference Controls (Teacher Mode) The system includes a human-in-the-loop feature to correct mistakes live.
+- 0: Save current frame as Robocon Logo
+- 1: Save current frame as Oracle Bone
+- 2: Save current frame as Fake/Random
+- 3: Save current frame as Background
+- q: Quit the application
+
 ```
 python inference.py
 ```
 
-Inference Controls (Teacher Mode)
-The system includes a human-in-the-loop feature to correct mistakes live.
-0: Save current frame as Robocon Logo
-1: Save current frame as Oracle Bone
-2: Save current frame as Fake/Random
-3: Save current frame as Background
-q: Quit the application
+
 ---
 
 Additional Files:
-extract_symbols.py - used to extract all the symbols in one go from single source image
-augment_rotation.py - used to rotate the images by 90/180/270 degrees
-augment_colors.py - used to add blue and red color filters on image to train them better for game conditions
+- extract_symbols.py - used to extract all the symbols in one go from single source image
+- augment_rotation.py - used to rotate the images by 90/180/270 degrees    
+- augment_colors.py - used to add blue and red color filters on image to train them better for game conditions
