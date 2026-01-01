@@ -43,13 +43,18 @@ Robocon_ML/
 Recommended Python: **3.8+**
 
 ```
-git clone <your-repo-url>
-cd code
+git clone [https://github.com/Nightwings24/Robocon2026-Vision-System.git](https://github.com/Nightwings24/Robocon2026-Vision-System.git)
+cd Robocon2026-Vision-System
+
+# Create virtual environment
 python -m venv venv
-# mac / linux
+
+# Activate (Mac/Linux)
 source venv/bin/activate
-# windows
+# Activate (Windows)
 # venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
