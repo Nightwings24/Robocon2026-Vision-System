@@ -3,7 +3,7 @@
 ---
 
 # Quick links
-- Report: `Robocon_ML_Report.pdf` 
+- Report: `ML_Report.pdf` 
 - Trained model: `robocon_model.pth`  
 - ONNX model: `robocon_vision.onnx`  
 - Main scripts: `train.py`, `inference.py`, `export_onnx.py`, `extract_symbols.py`, `augment_rotation.py`, `augment_colors.py`
@@ -19,21 +19,22 @@ A lightweight, real-time vision system to classify Robocon symbols (Robocon Logo
 
 ```text
 Robocon_ML/
-├─ dataset/
-│ ├─ class_0_logo/
-│ ├─ class_1_oracle/
-│ ├─ class_2_random/
-│ └─ class_3_background/
-├─ augment_colors.py
-├─ augment_rotation.py
-├─ export_onnx.py
-├─ extract_symbols.py
-├─ inference.py
-├─ train.py
-├─ requirements.txt
-├─ robocon_model.pth
-├─ robocon_vision.onnx
-└─ Robocon_ML_Report.pdf
+├── dataset/
+│   ├── class_0_logo/
+│   ├── class_1_oracle/
+│   ├── class_2_random/
+│   └── class_3_background/
+├── augment_colors.py
+├── augment_rotation.py
+├── export_onnx.py
+├── extract_symbols.py
+├── inference.py
+├── train.py
+├── requirements.txt
+├── robocon_model.pth
+├── robocon_vision.onnx
+├── README.md
+└── ML_Report.pdf
 ```
 
 ---
@@ -82,12 +83,12 @@ python train.py
 
 Step 2: Export to ONNX
 For deployment on the robot, convert the model to the optimized ONNX format:
+- Output: Generates robocon_vision.onnx
 
 ```
 python export_onnx.py
 ```
 
-Output: Generates robocon_vision.onnx.
 ---
 
 Step 3: Run Inference (Live Demo)
